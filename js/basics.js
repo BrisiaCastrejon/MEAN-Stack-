@@ -48,3 +48,7 @@ console.log("These are fruits for a otherJuice:", otherJuice);
 console.log("This is a fruit for a juice{}:", juice.fruitOne);
 console.log("This is a fruit for otherJuice{}:", otherJuice.fruitTwo);
 
+// ? to concatenate is a method to add one or more variables in a specific one
+var name = 'Joana';
+var age = 35;
+console.log('Mi sister name is ' + name + ' and she is ' + age + ' years old');
