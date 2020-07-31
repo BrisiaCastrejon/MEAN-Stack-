@@ -28,10 +28,8 @@ for (let i = 1; i <= 5; i++) {
     boxes[i].style.width = "50px";
     boxes[i].style.height = "50px";
     boxes[i].style.background = "black";
-    boxes[i].style.marginTop = "5px";
-     
- }
-
+    boxes[i].style.marginTop = "5px";     
+ };
 
 // ! WHILE
 var number = 1;
