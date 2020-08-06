@@ -1,0 +1,95 @@
+*{
+    background: #E5E8E8;
+    font-family: sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.title{
+    background: #283747;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+    width: 600px;
+}
+
+#calculator{
+    background: #DC7633;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    height: 600px;
+    margin: 20px auto;
+    position: relative;
+    width: 400px;
+}
+
+#calculator ul{
+    margin-left: 5px;
+}
+#calculator ul li{
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #6E2C00;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    margin: 8px;
+    padding: 32px;
+    text-align: center;
+    width: 15px;
+}
+
+#calculator ul li:hover{
+    background: #117A65;
+    color: white;
+}
+
+#calculator ul li:active{
+    background: #7D3C98;
+    color: white;
+}
+
+#operations{
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #6E2C00;
+    font-size: 25px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 10%;
+    position: relative;
+    text-align: right;
+    width: 70%;
+}
+
+#toDelete{
+    background: #7D3C98;
+    border: 5px solid #bbb;
+    border-radius: 10px;
+    bottom: 10px;
+    color: white;
+    cursor: pointer;
+    left: 150px;
+    padding: 5px 15px;
+    position: absolute;
+    text-align: center;
+    width: 60px;
+}
+
+#toDelete:hover{
+    background: #7D3C98;
+}
+
+#toDelete:active{
+    background: #117A65;
+}
