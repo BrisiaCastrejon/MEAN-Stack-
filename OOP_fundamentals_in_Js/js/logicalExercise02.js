@@ -61,13 +61,15 @@
  		if(horses.result()){
 
  			clearInterval(horses.interval);
- 			console.log("Horse of Mac", horses.Mac);
- 			console.log("Horse of Smith", horses.Smith);
- 			console.log("Horse of Jack", horses.Jack);
- 			console.log("Horse of Willy", horses.Willy);
+ 			console.log("Mac's horse", horses.Mac);
+ 			console.log("Smith's horse", horses.Smith);
+ 			console.log("Jack's horse", horses.Jack);
+ 			console.log("Willy's horse", horses.Willy);
 
  		};
 
  	},1)
 
  };
+
+ 
