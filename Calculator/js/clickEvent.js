@@ -1,0 +1,3 @@
+/*
+Logical will be separte in objects with properties and objects with methods
+*/
