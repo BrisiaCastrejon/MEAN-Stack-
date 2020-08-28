@@ -35,7 +35,6 @@ var objMethods = {
     },
     
     onPress: function (keyboardKey) {
-        console.log(keyboardKey.keyCode)
         if (keyboardKey.keyCode == 48 || keyboardKey.keyCode == 96) {
             objProperties.action = 'number';
             objProperties.digit = 0;
