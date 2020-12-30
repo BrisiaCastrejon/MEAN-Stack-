@@ -20,10 +20,17 @@ var metodos = {
         for (var i = 0; i < propiedades.paginacion.length; i++) {
             
             propiedades.paginacion[i].addEventListener('click', metodos.paginacionSlide);
+            //! Se considera el aumento de los iconos de forma dinamica para la proporción de la caja
+            propiedades.imagenSlide[i].style.width = (100/propiedades.paginacion.length) + '%';
+            console.log(propiedades.imagenSlide[i].style.width);
+
         };
         propiedades.avanzar.addEventListener('click', metodos.avanzarSlide);
         propiedades.retroceder.addEventListener('click', metodos.retrocederSlide);     
-        metodos.intervalo() 
+        metodos.intervalo();
+        //! Se considera el aumento de slides de forma dinámica para la proporcion de la caja
+        propiedades.cajaSlide.style.width = (propiedades.paginacion.length*100) + '%';
+        console.log(propiedades.cajaSlide.style.width);
     }, 
 
     paginacionSlide: function (i) {        
