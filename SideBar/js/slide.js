@@ -8,7 +8,9 @@ var propiedades = {
     animacionSlide: 'slide',
     imagenSlide: document.querySelectorAll('#slide ul li'),
     avanzar: document.getElementById('avanzar'),
-    retroceder: document.getElementById('retroceder')
+    retroceder: document.getElementById('retroceder'),
+    velocidadSlide: 3000,
+    loopSlide: false
 };
 
 //! Objeto con los métodos
@@ -20,11 +22,11 @@ var metodos = {
             propiedades.paginacion[i].addEventListener('click', metodos.paginacionSlide);
         };
         propiedades.avanzar.addEventListener('click', metodos.avanzarSlide);
-        propiedades.retroceder.addEventListener('click', metodos.retrocederSlide);      
+        propiedades.retroceder.addEventListener('click', metodos.retrocederSlide);     
+        metodos.intervalo() 
     }, 
 
-    paginacionSlide: function (i) {
-        
+    paginacionSlide: function (i) {        
         //! Se sacan los valores negativos para desplazar el slide
         propiedades.item = i.target.parentNode.getAttribute('itemHTML')-1;
         metodos.movimientoSlide(propiedades.item);
@@ -49,6 +51,8 @@ var metodos = {
     },
 
     movimientoSlide: function (item) {
+        //! Se agrega el loop del intervalo
+        propiedades.loopSlide = true;
         //! Se cambia el estilo de acuerdo al valor del item
         propiedades.cajaSlide.style.left = item * -100 + '%';
         
@@ -75,6 +79,18 @@ var metodos = {
             },500)            
         };
         
+    },
+
+    intervalo: function () {
+        //! Activar el carrusel de forma automatica
+        setInterval(function () {
+            //! Se arregla el intervalo de tiempo entre los slides cuando no es automatico
+            if (propiedades.loopSlide) {
+                propiedades.loopSlide = false;
+            }else{
+            metodos.avanzarSlide();
+            }
+        },propiedades.velocidadSlide)
     }
 }
 
