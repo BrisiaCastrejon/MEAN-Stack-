@@ -1,11 +1,14 @@
 //? Objeto con las propiedades
+// animacionSlide: 'fade'
 var propiedades = {
 
 	paginacion: document.querySelectorAll("#paginacion li"),
 	item: 0,
     cajaSlide: document.querySelector("#slide ul"),
-    animacionSlide: 'fade',
-    imagenSlide: document.querySelectorAll('#slide ul li')
+    animacionSlide: 'slide',
+    imagenSlide: document.querySelectorAll('#slide ul li'),
+    avanzar: document.getElementById('avanzar'),
+    retroceder: document.getElementById('retroceder')
 };
 
 //! Objeto con los métodos
@@ -16,12 +19,32 @@ var metodos = {
             
             propiedades.paginacion[i].addEventListener('click', metodos.paginacionSlide);
         };
+        propiedades.avanzar.addEventListener('click', metodos.avanzarSlide);
+        propiedades.retroceder.addEventListener('click', metodos.retrocederSlide);      
     }, 
 
     paginacionSlide: function (i) {
         
         //! Se sacan los valores negativos para desplazar el slide
         propiedades.item = i.target.parentNode.getAttribute('itemHTML')-1;
+        metodos.movimientoSlide(propiedades.item);
+    },
+
+    avanzarSlide: function () {
+        if (propiedades.item ==  propiedades.imagenSlide.length-1) {
+            propiedades.item = 0;
+        }else{
+            propiedades.item ++;
+        };        
+        metodos.movimientoSlide(propiedades.item);
+    },
+    
+    retrocederSlide: function () {
+        if (propiedades.item == 0) {
+            propiedades.item = propiedades.imagenSlide.length-1;
+        }else{
+            propiedades.item --;
+        };        
         metodos.movimientoSlide(propiedades.item);
     },
 
